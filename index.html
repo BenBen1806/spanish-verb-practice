@@ -21,15 +21,22 @@
             <div class="setting-item">
                 <label for="question-count">מספר תרגילים:</label>
                 <select id="question-count">
-                    <option value="5">5 תרגילים</option>
-                    <option value="10" selected>10 תרגילים</option>
+                    <option value="5" selected>5 תרגילים</option>
+                    <option value="10">10 תרגילים</option>
                     <option value="15">15 תרגילים</option>
                     <option value="20">20 תרגילים</option>
                 </select>
             </div>
+            <button id="refresh-btn">אפס הכל</button>
         </div>
 
-        <div id="game-card" class="card">
+        <div id="start-screen" class="card">
+            <h1>תרגול פעלים בספרדית 🇪🇸</h1>
+            <p>מוכן לתרגל? בחר הגדרות ולחץ על התחל.</p>
+            <button id="start-btn" style="background-color: #27ae60; width: 100%; margin-top: 10px;">התחל תרגול</button>
+        </div>
+
+        <div id="game-card" class="card hidden">
             <div id="stats">
                 <span id="score">ניקוד: 0</span>
                 <span id="progress">שאלה: 1/10</span>
@@ -41,6 +48,14 @@
                 <div class="input-area">
                     <input type="text" id="answer-input" autocomplete="off" placeholder="הקלד כאן...">
                     <button id="submit-btn">בדוק</button>
+                </div>
+                <div id="special-chars" class="special-chars">
+                    <button type="button">á</button>
+                    <button type="button">é</button>
+                    <button type="button">í</button>
+                    <button type="button">ó</button>
+                    <button type="button">ú</button>
+                    <button type="button">ñ</button>
                 </div>
             </div>
 
