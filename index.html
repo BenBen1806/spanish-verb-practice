@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תרגול הטיות פעלים בספרדית</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>תרגול פעלים בספרדית 🇪🇸</h1>
+        
+        <div class="settings">
+            <div class="setting-item">
+                <label for="mode">בחר זמן דקדוקי:</label>
+                <select id="mode">
+                    <option value="present">הווה פשוט (Presente)</option>
+                    <option value="progressive">הווה מתמשך (Presente Continuo)</option>
+                </select>
+            </div>
+            <div class="setting-item">
+                <label for="question-count">מספר תרגילים:</label>
+                <select id="question-count">
+                    <option value="5">5 תרגילים</option>
+                    <option value="10" selected>10 תרגילים</option>
+                    <option value="15">15 תרגילים</option>
+                    <option value="20">20 תרגילים</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="game-card" class="card">
+            <div id="stats">
+                <span id="score">ניקוד: 0</span>
+                <span id="progress">שאלה: 1/10</span>
+            </div>
+            
+            <div class="question-container">
+                <p id="instruction">השלם את הפועל בצורה הנכונה:</p>
+                <p id="sentence-display"></p>
+                <div class="input-area">
+                    <input type="text" id="answer-input" autocomplete="off" placeholder="הקלד כאן...">
+                    <button id="submit-btn">בדוק</button>
+                </div>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+            <button id="next-btn" class="hidden">לשאלה הבאה</button>
+        </div>
+
+        <div id="summary" class="card hidden">
+            <h2>כל הכבוד!</h2>
+            <p id="final-score"></p>
+            <button onclick="location.reload()">תרגל שוב</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
